@@ -1,0 +1,669 @@
+/*
+========================================
+Reset
+========================================
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+	 v2.0 | 20110126
+	 License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+=======================================
+MediaQuery-Reporter Styles
+=======================================
+*/
+
+body:after {
+	content: "less than 320px";
+	font-size: 300%;
+	font-weight: bold;
+	position: fixed;
+	bottom: 60px;
+	width: 100%;
+	text-align: center;
+	background-color: hsla(1,60%,40%,0.7);
+	color: #fff;
+}
+@media only screen and (min-width: 320px) {
+	body:after {
+		content: "320 to 480px";
+		background-color: hsla(90,60%,40%,0.7);
+	}
+}
+@media only screen and (min-width: 480px) {
+	body:after {
+		content: "480 to 768px";
+		background-color: hsla(180,60%,40%,0.7);
+	}
+}
+@media only screen and (min-width: 768px) {
+	body:after {
+		content: "768 to 1024px";
+		background-color: hsla(270,60%,40%,0.7);
+	}
+}
+@media only screen and (min-width: 1024px) {
+	body:after {
+		content: "1024 and up";
+		background-color: hsla(360,60%,40%,0.7);
+	}
+}
+
+/*
+=======================================
+Grid
+=======================================
+*/
+
+/*Gutters*/
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+			  box-sizing: border-box;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+/*
+=======================================
+Clearfix
+=======================================
+*/
+
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group:before {
+	clear: both;
+	*zoom: 1;
+}
+
+/*
+=======================================
+Custom Styles
+=======================================
+*/
+
+body {
+	background: #fff;
+	font: normal 100% "Roboto", sans-serif;
+}
+
+/*
+=======================================
+Header
+=======================================
+*/
+
+#primary-header {
+	background: inherit;
+	width: 100%;
+	height: 48px;
+	-webkit-box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.15);
+	   -moz-box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.15);
+			box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.15);
+	position: fixed;
+	top: 0;
+	z-index: 199999;
+}
+
+
+#logo-bg {
+	background: #f42;
+	background: -webkit-linear-gradient(to bottom right,#c09,#f42 85%);
+	background:	   -moz-linear-gradient(to bottom right,#c09,#f42 85%);
+	background:			linear-gradient(to bottom right,#c09,#f42);
+	display: block;
+	padding: 16px 20px;
+	width: 106px;
+	height: inherit;
+}
+
+#logo-bg:hover {
+	background: url("../img/logo_bg.gif");
+	background-position: center center;
+}
+
+#primary-nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	height: inherit;
+}
+
+.nav-icon {
+	background: #f42;
+	height: 2px;
+	width: 20px;
+}
+
+
+/*
+=======================================
+Teaser
+=======================================
+*/
+
+.main-sect {
+	position: relative;
+	top: 57px;
+}
+
+.teaser {
+	margin-bottom: 8px;
+	height: 180px;
+}
+
+.primary-sect {
+	margin: 8px 8px;
+}
+
+.teaser-link {
+	display: block;
+	z-index: 2;
+	height: inherit;
+}
+
+.teaser-icon {
+	vertical-align: text-top;
+}
+
+.teaser-nav {
+	padding-right: 10px;
+}
+
+.teaser-nav,
+.teaser-icon {
+	opacity: 0.6;
+}
+
+.teaser-header {
+	padding: 10px 10px;
+
+}
+
+
+
+
+/*
+=======================================
+Feature Article
+=======================================
+*/
+
+#feat-sect {
+	padding: 10px;
+}
+
+.feat {
+	margin-bottom: 15px;
+}
+
+.feat-cat {
+	padding-bottom: 15px;
+}
+
+.feat-auth-t {
+	padding-top: 5px;
+}
+
+.feat-art {
+	padding-left: 88px;
+}
+
+.feat-title {
+	padding-bottom: 5px;
+}
+
+/*
+=======================================
+Footer
+=======================================
+*/
+
+.footer-sect {
+	text-align: center;
+	width: 100%;
+	height: 182px;
+	padding: 2.5em 0;
+}
+
+.footer-sect:first-child {
+	margin-top: 60px;
+}
+
+#footer-top {
+	background: #f6f6f6;
+}
+
+#footer-mid {
+	background: #131313;
+}
+
+#footer-bottom {
+	background: #000;
+	color: #AAA;
+}
+
+.footer-wrapper {
+	display: inline-block;
+	width: 85%;
+}
+
+#footer-quote {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.footer-sm-nav {
+	background: #333;
+	border-radius: 50%;
+	border: 2px solid #333;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	text-align: center;
+	margin-right: 8px;
+}
+
+.footer-sm-nav:hover {
+	background: #000;
+}
+
+#ct-nav {
+	margin-top: 15px;
+}
+
+.footer-ct-nav {
+	margin-right: 8px;
+
+}
+
+.footer-ct:hover {
+	color: white;
+}
+
+#heart {
+	color: #f42;
+}
+
+.footer-wrapper-bottom {
+	width: 4%;
+	display: inline-block;
+}
+
+.line {
+	line-height: 20px;
+}
+
+/*
+=======================================
+Navigation
+=======================================
+*/
+
+.nav {
+	display: inline-block;
+
+}
+
+.nav-link {
+	display: block;
+	padding: 15px 15px;
+}
+
+.nav-primary,
+.nav-link {
+	width: 49px;
+	height: inherit;
+	border-left: 1px solid #eee;
+}
+
+#primary-nav ul {
+	width: 98px;
+	height: inherit;
+}
+
+
+.nav-primary:first-child {
+	opacity: 0.3;
+}
+
+.nav-primary:first-child:hover {
+	opacity: 0.7;
+}
+
+
+/*
+=======================================
+Links
+=======================================
+*/
+
+a {
+	text-decoration: none;
+}
+
+a: visited {
+	color: initial;
+}
+
+.feat-cat,
+.feat-cat:visited {
+	color: #f42;
+}
+
+.feat-cat:hover,
+.feat-title:visited {
+	color: #333;
+}
+
+.feat-title:hover {
+	color: #f42;
+	text-decoration: underline;
+}
+
+.teaser-link,
+.teaser-link:visited {
+	color: #fff;
+}
+
+.feat-auth:visited {
+	color: #bbb;
+}
+
+.feat-auth:hover {
+	color: #333;
+}
+
+
+/*
+=======================================
+Button
+=======================================
+*/
+
+.btn,
+.btn:visited {
+	border: 2px solid;
+	color: #666;
+	display: inline-block;
+}
+
+#share-btn {
+	padding: 5px 10px;
+	border-color: rgba(0, 0, 0, 0.1);
+	opacity: 0.7;
+}
+
+
+#share-btn:hover {
+	border-color: rgba(0, 0, 0, 0.2);
+	opacity: 1;
+}
+
+
+/*
+=======================================
+Typography
+=======================================
+*/
+
+header {
+	color: #fff;
+}
+
+h2 {
+	font-family: 'Electrolize', sans-serif;
+	font-size: 0.875em;
+	text-transform: uppercase;
+}
+
+#footer-h2 {
+	color: #555;
+}
+
+h3 {
+	font-family: 'Poppins';
+	font-size: 1.25em;
+	letter-spacing: -0.05em;
+	line-height: 1.25em;
+}
+
+.teaser-nav {
+	font-size: 0.875em;
+	color: #fff;
+}
+
+h1,
+#footer-quote {
+	font-family: 'Poppins';
+	font-size: 1.75em;
+}
+
+#footer-quote {
+	color: #f42;
+	font-size: 1.25em;
+	line-height: 1.2em;
+}
+
+.feat-art {
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+}
+
+.feat-art h4 {
+	font-weight: 700;
+	letter-spacing: -0.02em;
+}
+
+.feat-auth-t {
+	color: #bbb;
+	font-size: 0.7em;
+}
+
+.footer-ct,
+.footer-ct:visited {
+	color: #AAA;
+}
+
+.line {
+	font-size: 0.8em;
+}
+
+/*
+=======================================
+Images
+=======================================
+*/
+
+#logo {
+	display: block;
+	width: 66px;
+}
+
+#logo-footer {
+	display: inline-block;
+	height: 9px;
+}
+
+.icon-page {
+	background: url("../img/icon_page.svg") no-repeat;
+	background-size: 48px 352px;
+	display:block;
+}
+
+.icons {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+}
+
+#mag-icon {
+	background-position: -16px -16px;
+}
+
+#nav-icon {
+	background-position: 0 -32px;
+	width: 20px;
+	height: 18px;
+}
+
+
+.clock-icon {
+	background-position: -32px -80px;
+}
+
+.share-icon {
+	background-position: -32px -64px;
+}
+
+.grad-cover {
+	background: rgba(0,0,0,0);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	background: 	-moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	background: 		linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+}
+
+#teaser-1 {
+	background: url("../img/pokemon.gif") no-repeat center center;
+	background-size: cover;
+}
+
+#teaser-2 {
+	background: url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/07/Twitter-Verified-796x398.jpg") no-repeat center center;
+}
+
+#teaser-3 {
+	background: url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/07/tumblr_inline_oak9yixHgz1qbp58u_1280.jpg") no-repeat center 64%;
+	background-size: cover;
+}
+
+#teaser-4 {
+	background: url("../img/hero_1.jpg") no-repeat center center;
+}
+
+.feat-image {
+	background-position: center center;
+	background-size: cover;
+	display: block;
+	width: 72px;
+	height: 72px;
+}
+
+#feat-image-1 {
+	background-image: url("https://image-assets.stackcommerce.com/images/4104/medium_sale_4104_image-1.jpg");
+
+}
+
+#feat-image-2 {
+	background-image: url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/07/SwiftyBeaver-Framework-Circle-2800x1570-481x270.jpg");
+}
+
+#feat-image-3 {
+	background-image: url("https://images.stackcommerce.com/assets/productshot1-image/14753/4d2e846a33dcf23b9f13a584e9a589581172a837_main_hero_image.jpg");
+}
+
+#feat-image-4 {
+	background-image: url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/07/TinycardsTNW-441x270.jpg");
+}
+
+#twitter-icon-grey {
+	background-position: -16px -208px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	opacity: 0.5;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#twitter-icon {
+	background-position: -32px -208px;
+}
+
+#fb-icon {
+	background-position: -32px -176px;
+
+}
+
+#yt-icon {
+	background-position: -32px -224px;
+}
+
+#ig-icon {
+	background-position: -32px -240px;
+}
+
+#pin-icon {
+	background-position: -32px -256px;
+}
+
+#feed-icon {
+	background-position: -32px -160px;
+}
+
+#email-icon {
+	background-position: -32px -48px;
+}
+
